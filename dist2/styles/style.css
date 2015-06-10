@@ -1,0 +1,108 @@
+#photoSubmitForm{
+	text-align: center;
+}
+#photoUpload{
+	padding-left: 10px;
+	width:300px;
+	margin-bottom: 10px;
+}
+#photoComment{
+	padding-left: 10px;
+	width:300px;
+	margin-bottom: 10px;
+}
+.dropdown-form{
+	height:225px;
+	text-align: center;
+	display:none;
+}
+hr{
+	height: 10px;
+	background-color:white;
+	color:white;
+	border: 0 none;
+}
+body{
+	background-color: #EDEEEF;
+	
+}
+#my-photos{
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 20px;
+	height: 100%;
+	margin: 0 auto;
+	max-width:800px;
+	text-align: center;
+	background-color: #E0E1E2;
+}
+.photo-container{
+	padding-bottom: 10px;
+	background-color: white;
+	margin: 20px auto 0;
+	max-width: 650px;
+	box-shadow: 0px 0px 5px black;
+	font-size: 18px;
+}
+.photos{
+	width:100%;
+}
+.icon-border{
+	padding-left: 2.6px;
+	font-size: 30px;
+	height: 33px;
+	width:33px;
+	border-radius: 40px;
+	background-color:#082238;
+}
+nav{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 30px;
+	background-color: #337AB7;
+}
+#addImage{
+	font-size: 15px;
+	color:white;
+	border-radius: 3px;
+	background-color: #17AA56;
+	height: 60px;
+
+}
+#cancel{
+	font-size: 15px;
+	color:white;
+	border-radius: 3px;
+	background-color: gray;
+	height: 60px;
+	width: 100px;
+
+}
+#photo-icon{
+	margin-right: 3px;
+	font-size: 25px;
+}
+#user-comments{
+	text-align: left;
+	font-size: 12px;
+}
+.user-comments{
+	text-align: left;
+	font-size: 15px;
+}
+.comment-box{
+	width:100%;
+	max-width: 650px;
+	display: none;
+}
+.button-time{
+	background-color: #337AB7;
+	color:white;
+	border-radius: 3px;
+	border-style: none;
+	font-size: 13px;
+}
+.button-time:hover{
+	background-color: #082238;
+	transition: background-color ease .5s;
+}

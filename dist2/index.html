@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+	<nav>
+		<a href="#" class="click-form"><span class="glyphicon glyphicon-plus icon-border"></span></a>
+		<div class="dropdown-form">
+			<form id="photoSubmitForm">
+				<div>
+					<input type="text" id="photoUpload" placeholder="Image URL">
+				</div>
+				<div>
+					<input type="text" id="photoComment"placeholder="Comment">
+				</div>
+				<button id="addImage"><span id="photo-icon" class="glyphicon glyphicon-picture"></span>Add Image</button>
+			</form>
+				<button id="cancel">Cancel</button>
+		</div>
+	</nav>
+	<section id="my-photos"></section>
+
+	<script type="text/template" id="photoTemplate">
+		<div class="photo-container">
+			<%="<img src='" +model.get('photo')+"' class='photos'>" %>
+			<hr><%= model.get('comment') %>
+			<div style="text-align: left; padding-left: 5px;">Comments  -  <button class="<%= model.cid %> button-time">Add Comment</button></div>
+			<ul class="user-comments user-comments-<%=model.cid%>">
+			</ul>
+		</div>
+		<form class="comment-submission-<%= model.cid %>">
+			<input id="<%= model.cid %>" class="comment-box comment-box-<%= model.cid %>" type="text">
+		</form>
+	</script>
+	<script type="text/javascript" src="scripts/combined.js"></script>
+</body>
+</html>
