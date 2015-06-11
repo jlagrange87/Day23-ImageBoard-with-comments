@@ -8,12 +8,19 @@ module.exports = Backbone.Model.extend({
 		user_comment: null
 	},
 	validate: function(attr, options){
-		if(attr.photo.length == 0  || attr.photo.indexOf("http://") !== 0){
-			return "You must upload a photo in proper format!";
+		var httpChecker = attr.photo.substring(0,7);
+		var httpsChecker = attr.photo.substring(0,8);
+
+		if(attr.comment.length === 0 || attr.photo.length === 0){
+			return "*Both fields must not be empty";
+		} 
+		else if(httpChecker === "http://" || httpsChecker === "https://"){
+		} 
+		else {
+			return "*Must begin with https:// or http://";
 		}
-		else{
-			return false;
-		}
+
+		return false;
 	},
 	urlRoot: "https://tiny-pizza-server.herokuapp.com/collections/josh-model-photo",
 	idAttribute: "_id"
