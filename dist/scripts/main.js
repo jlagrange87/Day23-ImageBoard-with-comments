@@ -47,10 +47,12 @@ $(document).ready(function(){
 			CommentList.add(newComment);
 			newComment.save();
 			console.log(newComment.attributes.userComment)
-		})
+		});
+
 	});
 	CommentList.on("add", function(model){
 		var photoModel = PhotoList.get(model.get("photoId"));
-		$(".user-comments-"+photoModel.cid).append("<li>"+model.get("userComment")+"</li>");
+		console.log(photoModel.id)
+		$(".user-comments-"+photoModel.id).append("<li>"+model.get("userComment")+"</li>");
 	});
 });

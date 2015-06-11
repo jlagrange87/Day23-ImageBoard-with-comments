@@ -28,7 +28,7 @@
 			<%="<img src='" +model.get('photo')+"' class='photos'>" %>
 			<hr><%= model.get('comment') %>
 			<div style="text-align: left; padding-left: 5px;">Comments  -  <button class="<%= model.cid %> button-time">Add Comment</button></div>
-			<ul class="user-comments user-comments-<%=model.cid%>"><%=model.get("user_comment.get(userComment)")%>
+			<ul class="user-comments user-comments-<%=model.get('_id')%>"><%=model.get("user_comment.get(userComment)")%>
 			</ul>
 		</div>
 		<form class="comment-submission-<%= model.cid %>">
