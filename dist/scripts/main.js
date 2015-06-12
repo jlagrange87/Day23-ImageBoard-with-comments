@@ -9,8 +9,11 @@ $(document).ready(function(){
 	})
 	var PhotoList = new PhotoCollection();
 	var CommentList = new CommentCollection()
-	CommentList.fetch();
-	PhotoList.fetch();
+	PhotoList.fetch({
+		success: function(){
+			CommentList.fetch();
+		}
+	});
 	var PhotoBuilder = _.template($("#photoTemplate").html());
 
 	$("#photoSubmitForm").submit(function(e){
@@ -32,8 +35,8 @@ $(document).ready(function(){
 	PhotoList.on("add", function(model){
 		var photoHtml = PhotoBuilder({model: model});
 		$("#my-photos").append(photoHtml);
-		$("."+model.cid).click(function(){
-			$("#"+model.cid).slideDown("slow");
+		$(".button"+model.cid).click(function(){
+			$("#comment-input"+model.cid).slideDown("slow");
 
 		})
 		console.log(PhotoList)
